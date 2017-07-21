@@ -22,11 +22,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   /* Keymap 0: Basic layer
    *
    * ,--------------------------------------------------.           ,--------------------------------------------------.
-   * |  Esc   |   1  |   2  |   3  |   4  |   5  |      |           |      |   6  |   7  |   8  |   9  |   0  |   '    |
+   * |  Esc   |   1  |   2  |   3  |   4  |   5  | Ins  |           | Supr |   6  |   7  |   8  |   9  |   0  |   '    |
    * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
-   * | Del    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   Ç    |
+   * |   =    |   Q  |   W  |   E  |   R  |   T  |  L1  |           |  L1  |   Y  |   U  |   I  |   O  |   P  |   Ç    |
    * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
-   * |   =    |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |Ñ / L2|´ / Cmd |
+   * |CapsLock|   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |Ñ / L2|´ / Cmd |
    * |--------+------+------+------+------+------| Hyper|           | Meh  |------+------+------+------+------+--------|
    * | LShift |  Z   |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |  Up  |   ,  |   .  | RShift |
    * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -42,8 +42,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [BASE] = KEYMAP(
     KC_ESCAPE,  KC_1,   KC_2,     KC_3,           KC_4,             KC_5,          KC_TRNS,
-    KC_DELETE,  KC_Q,   KC_W,     KC_E,           KC_R,             KC_T,          TG(1),
-    KC_EQUAL,   KC_A,   KC_S,     KC_D,           KC_F,             KC_G,
+    KC_EQUAL,   KC_Q,   KC_W,     KC_E,           KC_R,             KC_T,          TG(1),
+    KC_CAPSLOCK,   KC_A,   KC_S,     KC_D,           KC_F,             KC_G,
     KC_LSHIFT,  KC_Z,   KC_X,     KC_C,           KC_V,             KC_B,          ALL_T(KC_NO),
                 MO(1),  KC_LCTL,  LALT(KC_LSHIFT),  LSFT(KC_LCTL),  ALGR_T(KC_NO),
 
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                 KC_SPACE,  KC_BSPACE,  KC_END,
 
 
-  KC_TRNS,        KC_6,    KC_7,     KC_8,     KC_9,     KC_0,             ES_APOS,
+  KC_DELETE,        KC_6,    KC_7,     KC_8,     KC_9,     KC_0,             ES_APOS,
   TG(1),          KC_Y,    KC_U,     KC_I,     KC_O,     KC_P,             ES_CCED,
                   KC_H,    KC_J,     KC_K,     KC_L,     LT(2, KC_SCOLON), GUI_T(KC_QUOTE),
   MEH_T(KC_NO),   KC_N,    KC_M,     KC_UP,    KC_COMMA, KC_DOT,           KC_RSHIFT,
@@ -89,9 +89,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // left hand
        KC_TRNS,   KC_F1,   KC_F2,  KC_F3,     KC_F4,   KC_F5,  KC_TRNS,
        KC_TRNS, ES_SLSH,   ES_AT,  ES_LCBR, ES_RCBR, ES_QUOT,  KC_EXLM,
-       KC_TRNS, ES_HASH,  KC_DLR,  ES_LPRN, ES_RPRN, ES_IEXL,
+       KC_TRNS, ES_HASH,  KC_DLR,  ES_LPRN, ES_RPRN, ES_APOS,
        KC_TRNS, KC_PERC, ES_CIRC,  ES_LBRC, ES_RBRC,  ES_GRV,  ES_EQL,
-          EPRM, ES_AMPR, ES_PIPE,  ES_SCLN, ES_COLN,
+          EPRM, ES_AMPR, ES_PIPE,  ES_LESS, ES_GRTR,
                                        KC_TRNS,KC_TRNS,
                                                KC_TRNS,
                                KC_TRNS,KC_TRNS,KC_TRNS,
