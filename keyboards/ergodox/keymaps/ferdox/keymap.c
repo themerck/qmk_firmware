@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    *                                 `--------------------'       `----------------------'
    */
   [BASE] = KEYMAP(
-    KC_ESCAPE,  KC_1,   KC_2,     KC_3,           KC_4,             KC_5,          KC_TRNS,
+    KC_ESCAPE,  KC_1,   KC_2,     KC_3,           KC_4,             KC_5,          KC_INS,
     KC_EQUAL,   KC_Q,   KC_W,     KC_E,           KC_R,             KC_T,          TG(1),
     KC_CAPSLOCK,   KC_A,   KC_S,     KC_D,           KC_F,             KC_G,
     KC_LSHIFT,  KC_Z,   KC_X,     KC_C,           KC_V,             KC_B,          ALL_T(KC_NO),
@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   MEH_T(KC_NO),   KC_N,    KC_M,     KC_UP,    KC_COMMA, KC_DOT,           KC_RSHIFT,
                            KC_LEFT,  KC_DOWN,  KC_RIGHT, CTL_T(ES_MINS),   MO(1),
 
-  GUI_T(KC_L),  CTL_T(KC_ESCAPE),
+  LGUI(KC_L),  CTL_T(KC_ESCAPE),
   KC_PGUP,
   KC_PGDOWN,  KC_TAB, KC_ENTER
 ),
